@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atlas • Research Before It Answers</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="blur orb1"></div>
+        <div class="blur orb2"></div>
+        <div class="grid"></div>
+    </div>
+
+    <main class="container">
+
+        <section class="hero">
+
+            <div class="logo">
+                <div class="logo-circle">
+                    A
+                </div>
+
+                <div>
+                    <h1>Atlas</h1>
+                    <p>Research before it answers.</p>
+                </div>
+            </div>
+
+            <h2>
+                Ask a question.
+                <br>
+                Atlas researches it for you.
+            </h2>
+
+            <p class="subtitle">
+                Atlas plans research tasks, gathers public information,
+                compares sources, and generates an AI-powered answer.
+            </p>
+
+        </section>
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <textarea
+                    id="questionInput"
+                    rows="1"
+                    placeholder="Ask anything..."
+                ></textarea>
+
+                <button id="searchButton">
+                    Research
+                </button>
+
+            </div>
+
+            <p class="hint">
+                Press <strong>Enter</strong> to research
+                •
+                <strong>Shift + Enter</strong> for a new line
+            </p>
+
+        </section>
+
+        <section
+            id="loadingSection"
+            class="loading hidden"
+        >
+
+            <div class="loader"></div>
+
+            <h3 id="loadingTitle">
+                Planning research...
+            </h3>
+
+            <p id="loadingSubtitle">
+                Atlas is thinking.
+            </p>
+
+        </section>
+
+        <section
+            id="progressSection"
+            class="progress hidden"
+        >
+
+            <div class="progress-card">
+
+                <div class="progress-top">
+
+                    <h3>
+                        Research Progress
+                    </h3>
+
+                    <span id="researchId">
+                        #--------
+                    </span>
+
+                </div>
+
+                <div class="progress-step">
+
+                    <div class="step-dot active"></div>
+
+                    <div class="step-content">
+                        <h4>Planning</h4>
+                        <p id="planningStatus">
+                            Waiting...
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="progress-step">
+
+                    <div class="step-dot"></div>
+
+                    <div class="step-content">
+                        <h4>Searching</h4>
+                        <p id="searchStatus">
+                            Waiting...
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="progress-step">
+
+                    <div class="step-dot"></div>
+
+                    <div class="step-content">
+                        <h4>Writing</h4>
+                        <p id="writerStatus">
+                            Waiting...
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="answerSection"
+            class="answer hidden"
+        >
+
+            <div class="answer-card">
+
+                <div class="answer-top">
+
+                    <h2>
+                        Answer
+                    </h2>
+
+                    <div class="answer-actions">
+
+                        <button id="copyButton">
+                            Copy
+                        </button>
+
+                        <span
+                            id="modelBadge"
+                            class="badge"
+                        >
+                            ---
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="answerText"
+                    class="answer-content"
+                >
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="sourcesSection"
+            class="sources hidden"
+        >
+
+            <div class="sources-header">
+
+                <h2>
+                    Sources
+                </h2>
+
+                <span id="sourceCount">
+                    0 Sources
+                </span>
+
+            </div>
+
+            <div
+                id="sourcesGrid"
+                class="sources-grid"
+            >
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Atlas • AI Research Engine
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
